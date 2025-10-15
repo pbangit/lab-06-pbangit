@@ -17,6 +17,8 @@ public class CityList {
      * This adds a city to the list if the city does not exist
      * @param city
      *      This is a candidate city to add
+     * @throws
+     *      IllegalArgumentException If candidate city is already in the list.
      */
     public void add(City city){
         if(cities.contains(city)){
