@@ -1,11 +1,14 @@
 package com.example.listycity;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-import android.content.OperationApplicationException;
-
-class CityTestList{
+public class CityListTest {
     private CityList mockCityList(){
         CityList cityList = new CityList();
         cityList.add(mockCity());
@@ -67,7 +70,7 @@ class CityTestList{
         assertTrue(cityList.hasCity(city));
         cityList.delete(city);
         assertFalse(cityList.hasCity(city));
-         IllegalArgumentException thrown = Assertions.assertThrows(IllegalArgumentException.class, () ->{
+        IllegalArgumentException thrown = Assertions.assertThrows(IllegalArgumentException.class, () ->{
             throw new IllegalArgumentException();
         });
     }
@@ -84,3 +87,4 @@ class CityTestList{
         assertEquals(2, cityList.countCities());
     }
 }
+

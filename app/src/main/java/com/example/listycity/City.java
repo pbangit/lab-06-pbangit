@@ -16,19 +16,32 @@ public class City implements Comparable<City>{
     }
 
 
+    /**
+     * This gets the name of the city
+     * @return
+     *      Returns city name.
+     */
     String getCityName(){
         return this.city;
     }
 
-
+    /**
+     * This gets the name of the province.
+     * @return
+     *      Returns province name.
+     */
     String getProvinceName(){
         return this.province;
     }
 
-
+    /**
+     * This function compares this city with another city.
+     * @param otherCity
+     * @return
+     *      Returns the result of comparing city names.
+     */
     @Override
     public int compareTo(City otherCity){
-        City city = (City) otherCity;
-        return this.city.compareTo(city.getCityName());
+        return this.city.compareTo(otherCity.getCityName());
     }
 }
