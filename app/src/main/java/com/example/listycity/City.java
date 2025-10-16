@@ -9,7 +9,11 @@ public class City implements Comparable<City>{
     private String city;
     private String province;
 
-
+    /**
+     * Constructor for a city with a given name and province.
+     * @param city The city name.
+     * @param province The province name.
+     */
     City(String city, String province){
         this.city = city;
         this.province = province;
@@ -36,7 +40,7 @@ public class City implements Comparable<City>{
 
     /**
      * This function compares this city with another city.
-     * @param otherCity
+     * @param otherCity The city to compare to.
      * @return
      *      Returns the result of comparing city names.
      */
